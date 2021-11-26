@@ -30,3 +30,6 @@ urlList=('https://www.cloudflare.com/ips-v4' 'https://www.cloudflare.com/ips-v6'
 targetFile='/etc/nginx/cf.conf'
 
 updateFile $targetFile "$(generateRules $urlList)"
+
+nginx -s reload
+
